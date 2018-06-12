@@ -2,7 +2,7 @@
   "name": "vue-pikaday-component",
   "main": "src/index.js",
   "description": "A lightweight Vue.js component wrapping https://github.com/dbushell/Pikaday.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Andreas Fischer",
   "license": "MIT",
   "repository": {
