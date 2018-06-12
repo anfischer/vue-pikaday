@@ -2,6 +2,7 @@
 
 [![Software License][ico-license]](LICENSE.md)
 [![Build Status][ico-travis]][link-travis]
+[![Code Coverage][ico-codecov]][link-codecov]
 
 A lightweight Vue.js component wrapping [dbushell/Pikaday](https://github.com/dbushell/Pikaday).
 
@@ -68,6 +69,8 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/anfischer/vue-pikaday/master.svg?style=flat-square
+[ico-codecov]: https://codecov.io/gh/anfischer/vue-pikaday/branch/master/graph/badge.svg
 
 [link-travis]: https://travis-ci.org/anfischer/vue-pikaday
 [link-author]: https://github.com/anfischer
+[link-codecov]: https://codecov.io/gh/anfischer/vue-pikaday
