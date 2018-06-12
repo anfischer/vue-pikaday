@@ -2,7 +2,18 @@ import { shallowMount } from '@vue/test-utils'
 import Pikaday from 'pikaday'
 import DatePicker from '@/components/DatePicker.vue'
 
-jest.mock('pikaday')
+jest.mock('pikaday', () => {
+  return jest.fn().mockImplementation((constructorParams) => {
+    return {
+      setDate: jest.fn(() => {
+        constructorParams.onSelect.call(this)
+      }),
+      toString: jest.fn(() => {
+        return '9999-99-99'
+      }),
+    }
+  })
+})
 
 describe('DatePicker.vue', () => {
   beforeEach(() => {
@@ -73,5 +84,15 @@ describe('DatePicker.vue', () => {
     expect(wrapper.vm.value).toEqual('2018-12-12')
 
     expect(wrapper.vm.datePicker.setDate).toBeCalledWith('2018-12-12')
+  })
+
+  it('When onSelect() is called by pikaday it emits an input event with the string value of the picker', () => {
+    const value = '2018-06-08'
+    const wrapper = shallowMount(DatePicker, {
+      propsData: { value },
+    })
+
+    wrapper.vm.datePicker.setDate()
+    expect(wrapper.emitted('input')[0]).toEqual(['9999-99-99'])
   })
 })
