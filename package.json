@@ -14,7 +14,8 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test": "vue-cli-service test:unit",
-    "test:watch": "vue-cli-service test:unit --watch"
+    "test:watch": "vue-cli-service test:unit --watch",
+    "test:coverage": "vue-cli-service test:unit --coverage"
   },
   "dependencies": {
     "pikaday": "^1.7.0",
